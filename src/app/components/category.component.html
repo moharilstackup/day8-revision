@@ -1,3 +1,30 @@
 <p>
   category works!
 </p>
+<mat-card class="example-card">
+  <!-- <mat-card-header class="card-title">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>STARWARS</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header> -->
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="primary">
+      <p>
+        STARWARS
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div fxLayout="column">
+      <!-- <div *ngFor="let category of categories; let i = index;"> -->
+        <!-- <button mat-stroked-button color="primary" (click)="`showCategory({{category.id}})`">{{category.name}}</button> -->
+
+        <button mat-stroked-button color="primary" (click)="showCharacters()">Characters</button>
+        <button mat-stroked-button color="primary" (click)="showFilms()">Films</button>
+        <button mat-stroked-button color="primary" (click)="showCharacterDetail()">Character Detail</button>
+        
+      <!-- </div> -->
+    </div>
+  </mat-card-actions>
+</mat-card>
