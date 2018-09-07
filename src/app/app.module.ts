@@ -47,7 +47,7 @@ import {AppRoutingModule} from './app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [StarwarsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

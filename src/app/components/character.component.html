@@ -1,6 +1,6 @@
-<p>
+<!-- <p>
   character works!
-</p>
+</p> -->
 <mat-card class="example-card">
   <!-- <mat-card-header class="card-title">
       <div mat-card-avatar class="example-header-image"></div>
@@ -14,11 +14,16 @@
         STARWARS
       </p>
     </div>
+    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="secondary">
+      <p>
+        CHARACTERS
+      </p>
+    </div>
   </mat-card-content>
   <mat-card-actions>
     <div fxLayout="column">
       <div *ngFor="let character of characters; let i = index;">
-        <button mat-stroked-button color="primary">{{character.name}}</button>
+        <button mat-stroked-button color="primary" (click)="showCharacters(character.id)" style="width:100%">{{character.name}}</button>
         <!--
           <button mat-stroked-button color="primary" (click)="showCharacters()">Characters</button>
           <button mat-stroked-button color="primary" (click)="showFilms()">Films</button>
