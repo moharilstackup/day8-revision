@@ -1,6 +1,7 @@
 .example-card {
     max-width: 400px;
-    border : none;
+    width: 500px;
+    border : solid;
   }
   
   .example-header-image {
@@ -19,3 +20,45 @@
   .button-row a {
     margin-right: 8px;
   }
+
+ .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 80%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.subTitleDiv {
+  text-align:center;
+  background-color:rgb(155, 155, 194);
+}
+
+.subTitleDivBorder {
+  border:none;
+  margin:5; 
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(155, 155, 194)
+}

@@ -8,22 +8,35 @@
       <mat-card-subtitle>Dog Breed</mat-card-subtitle>
     </mat-card-header> -->
   <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-  <mat-card-content>
-    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="primary">
-      <p>
-        STARWARS
-      </p>
+  <mat-card-content style="border: solid;width:100%">
+    <div class="subTitleDiv" fxLayout="row" fxLayoutAlign="space-around" style="border:solid">
+      <div></div>
+      <div>
+        <p class="subTitleDivBorder">
+          STARWARS
+        </p>
+      </div>
+      <div></div>
     </div>
-    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="secondary">
-      <p>
-        CHARACTERS
-      </p>
+    <div class="subTitleDivBorder" fxLayout="row" fxLayoutAlign="space-around">
+      <div></div>
+      <div>
+        <p class="subTitleDivBorder">
+          CHARACTERS
+        </p>
+      </div>
+      <!-- </div>
+    <div color="secondary"> -->
+      <div class="subTitleDivBorder">
+        <input type="image" src="../assets/back.png" width="25px" height="25px" class="subTitleDivBorder" (click)="showCategory()"
+        />
+      </div>
     </div>
   </mat-card-content>
   <mat-card-actions>
     <div fxLayout="column">
       <div *ngFor="let character of characters; let i = index;">
-        <button mat-stroked-button color="primary" (click)="showCharacters(character.id)" style="width:100%">{{character.name}}</button>
+        <button mat-stroked-button color="primary" (click)="showCharacter(character.name)" style="width:100%">{{character.name}}</button>
         <!--
           <button mat-stroked-button color="primary" (click)="showCharacters()">Characters</button>
           <button mat-stroked-button color="primary" (click)="showFilms()">Films</button>

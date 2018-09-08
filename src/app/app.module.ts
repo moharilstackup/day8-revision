@@ -22,13 +22,17 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
     CharacterComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +49,10 @@ import {AppRoutingModule} from './app-routing.module';
     MatCheckboxModule,
     FlexLayoutModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StarwarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

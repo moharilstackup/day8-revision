@@ -1,3 +1,57 @@
-<p>
-  character-detail works!
-</p>
+<mat-card class="example-card">
+  <!-- <mat-card-content style="border: solid;width:100%">
+    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="primary">
+      <p>
+        STARWARS
+      </p>
+    </div>
+    <div style="border:solid;text-align:center;background-color:rgb(155, 155, 194)" color="secondary">
+      <p>
+        CHARACTER DETAIL
+      </p>
+    </div>
+  </mat-card-content> -->
+  <mat-card-content style="border: solid;width:100%">
+      <div class="subTitleDiv" fxLayout="row" fxLayoutAlign="space-around" style="border:solid">
+        <div></div>
+        <div>
+          <p class="subTitleDivBorder">
+            STARWARS
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div class="subTitleDivBorder" fxLayout="row" fxLayoutAlign="space-around">
+        <div></div>
+        <div>
+          <p class="subTitleDivBorder">
+            CHARACTER DETAIL
+          </p>
+        </div>
+        <!-- </div>
+      <div color="secondary"> -->
+        <div class="subTitleDivBorder">
+          <input type="image" src="../assets/back.png" width="25px" height="25px" class="subTitleDivBorder" (click)="showCharacters()"
+          />
+        </div>
+      </div>
+    </mat-card-content>
+  <mat-card-actions>
+    <div fxLayout="column">
+      <!-- You select {{characterSelect}} -->
+      <div *ngFor="let character of characters; let i = index;">
+        <!-- <button mat-stroked-button color="primary" (click)="showCharacter(character.name)" style="width:100%">{{character.name}}</button> -->
+        <!-- {{character.name}}, {{characterSelect}} -->
+        <div *ngIf="character.name == characterSelect">
+          <p>
+            Name : {{character.name}}
+          </p>
+          <p>Height : {{character.height}}
+          </p>
+          Mass : {{character.mass}}
+        </div>
+
+      </div>
+    </div>
+  </mat-card-actions>
+</mat-card>
